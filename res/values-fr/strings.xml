@@ -154,4 +154,36 @@
 \n
 \nL\'égaliseur réduit un peu la séparation stéréo, vous pouvez utiliser un effet de réverbération Haas pour augmenter la largeur de stéréo perçue. Ceci est contrôlé avec le paramètre &#8220;Type de chambre&#8221;.
     </string>
+    <!-- Sound Control -->
+    <string name="soundcontrol_title">Contrôle du son</string>
+
+    <!-- Preferences -->
+    <string name="pref_soundcontrol_presets_title">Pré-réglages</string>
+    <string name="pref_soundcontrol_headphone_gain_title">Gain du casque</string>
+    <string name="pref_soundcontrol_headphone_poweramp_gain_title">Gain PowerAmp du casque</string>
+    <string name="pref_soundcontrol_microphone_gain_title">Gain du micro</string>
+    <string name="pref_soundcontrol_speaker_gain_title">Gain du haut-parleur</string>
+    <string name="pref_soundcontrol_headphone_gain_left">Casque (Gauche)</string>
+    <string name="pref_soundcontrol_headphone_gain_right">Casque (Droit)</string>
+    <string name="pref_soundcontrol_headphone_poweramp_gain_left">Casque PowerAmp (Gauche)</string>
+    <string name="pref_soundcontrol_headphone_poweramp_gain_right">Casque PowerAmp (Droit)</string>
+    <string name="pref_soundcontrol_microphone_handset_gain_title">Micro du téléphone</string>
+    <string name="pref_soundcontrol_microphone_camcorder_gain_title">Micro du caméscope</string>
+
+    <string name="sc_version_title">Contrôle du son</string>
+    <string name="sc_preset_summary">Définir le réglage à charger</string>
+    <string name="sc_preset_loaded">Réglage \"%s\" chargé\u00A0!</string>
+    <string name="sc_preset_custom">Personnalisée</string>
+    <string name="sc_preset_quality">Qualité</string>
+    <string name="sc_preset_loudness">Intensité</string>
+    <string name="sc_preset_quiet">Silencieux</string>
+    <string name="sc_preset_stock">Par défaut</string>
+    <string name="sc_value_changed">S\'il vous plaît, stoppez et relancez votre musique pour appliquer les paramètres\u00A0!</string>
+
+    <!-- Drawer -->
+    <string name="navigation_drawer_toggle">Ouvrir le panneau</string>
+    <string name="navigation_drawer_open">Ouvrir le panneau latéral</string>
+    <string name="navigation_drawer_close">Fermer le panneau latéral</string>
+    <string name="navigation_toggle_drawer">Utiliser le panneau latéral</string>
+    <string name="navigation_toggle_tabbed">Utiliser les onglets</string>
 </resources>
