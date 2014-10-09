@@ -72,6 +72,7 @@ public final class DSPManager extends FragmentActivity {
     //==================================
     // Static Fields
     //==================================
+    private static final String TAG = "DSPManager";
     private static final String STATE_SELECTED_POSITION = "selected_navigation_drawer_position";
     private static final String PREF_USER_LEARNED_DRAWER = "navigation_drawer_learned";
     private static final String PREF_IS_TABBED = "pref_is_tabbed";
@@ -138,6 +139,9 @@ public final class DSPManager extends FragmentActivity {
             mFromSavedInstanceState = true;
         }
 
+        Intent serviceIntent = new Intent(this, HeadsetService.class);
+        startService(serviceIntent);
+
         setUpUi();
     }
 
@@ -165,13 +169,17 @@ public final class DSPManager extends FragmentActivity {
             public void onServiceConnected(ComponentName name, IBinder binder) {
                 HeadsetService service = ((HeadsetService.LocalBinder) binder).getService();
                 String routing = service.getAudioOutputRouting();
-                if (mIsTabbed && viewPager != null) {
-                    String[] entries = getEntries();
-                    for (int i = 0; i < entries.length; i++) {
-                        if (routing.equals(entries[i])) {
-                            viewPager.setCurrentItem(i);
-                            break;
+                String[] entries = getEntries();
+                for (int i = 0; i < entries.length; i++) {
+                    if (routing.equals(entries[i])) {
+                        if (mIsTabbed) {
+                            if (viewPager != null) {
+                                viewPager.setCurrentItem(i);
+                            }
+                        } else {
+                            selectItem(i);
                         }
+                        break;
                     }
                 }
                 unbindService(this);
@@ -270,9 +278,6 @@ public final class DSPManager extends FragmentActivity {
             viewPager.setAdapter(pagerAdapter);
             viewPager.setCurrentItem(0);
             pagerTabStrip = (PagerTabStrip) findViewById(R.id.pagerTabStrip);
-
-            Intent serviceIntent = new Intent(this, HeadsetService.class);
-            startService(serviceIntent);
 
             pagerTabStrip.setDrawFullUnderline(true);
             pagerTabStrip.setTabIndicatorColor(
