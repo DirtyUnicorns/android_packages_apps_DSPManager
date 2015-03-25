@@ -19,7 +19,7 @@ package com.bel.android.dspmanager.modules.boefflasoundcontrol;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.preference.CheckBoxPreference;
+import android.preference.SwitchPreference;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceFragment;
@@ -43,19 +43,19 @@ public class BoefflaSoundControl extends PreferenceFragment
     public static final String NAME = "BoefflaSoundControl";
     private SwitchPreference mBoefflaSound;
     // General
-    private CheckBoxPreference mDACDirect;
-    private CheckBoxPreference mDACOversampling;
-    private CheckBoxPreference mFLLTuning;
-    private CheckBoxPreference mMonoDownmix;
-    private CheckBoxPreference mOverSaturationSuppress;
+    private SwitchPreference mDACDirect;
+    private SwitchPreference mDACOversampling;
+    private SwitchPreference mFLLTuning;
+    private SwitchPreference mMonoDownmix;
+    private SwitchPreference mOverSaturationSuppress;
     private SeekBarPreference mStereoExpansion;
     // Speaker
     private SeekBarPreference mSpeakerVolume;
-    private CheckBoxPreference mSpeakerTuning;
+    private SwitchPreference mSpeakerTuning;
     // Headphone
     private SeekBarPreference mHeadphoneVolumeLeft;
     private SeekBarPreference mHeadphoneVolumeRight;
-    private CheckBoxPreference mPrivacyMode;
+    private SwitchPreference mPrivacyMode;
     // Microphone
     private SeekBarPreference mMicrophoneCall;
     private SeekBarPreference mMicrophoneGeneral;
@@ -97,23 +97,23 @@ public class BoefflaSoundControl extends PreferenceFragment
         mBoefflaSound.setOnPreferenceChangeListener(this);
 
         // General
-        mDACDirect = (CheckBoxPreference) findPreference(DAC_DIRECT);
+        mDACDirect = (SwitchPreference) findPreference(DAC_DIRECT);
         updateDACDirect();
         mDACDirect.setOnPreferenceChangeListener(this);
 
-        mDACOversampling = (CheckBoxPreference) findPreference(DAC_OVERSAMPLING);
+        mDACOversampling = (SwitchPreference) findPreference(DAC_OVERSAMPLING);
         updateDACOversampling();
         mDACOversampling.setOnPreferenceChangeListener(this);
 
-        mFLLTuning = (CheckBoxPreference) findPreference(FLL_TUNING);
+        mFLLTuning = (SwitchPreference) findPreference(FLL_TUNING);
         updateFLLTuning();
         mFLLTuning.setOnPreferenceChangeListener(this);
 
-        mMonoDownmix = (CheckBoxPreference) findPreference(MONO_DOWNMIX);
+        mMonoDownmix = (SwitchPreference) findPreference(MONO_DOWNMIX);
         updateMonoDownmix();
         mMonoDownmix.setOnPreferenceChangeListener(this);
 
-        mOverSaturationSuppress = (CheckBoxPreference) findPreference(OVER_SATURATION_SUPPRESS);
+        mOverSaturationSuppress = (SwitchPreference) findPreference(OVER_SATURATION_SUPPRESS);
         updateOverSaturationSuppress();
         mOverSaturationSuppress.setOnPreferenceChangeListener(this);
 
@@ -123,7 +123,7 @@ public class BoefflaSoundControl extends PreferenceFragment
 
 
         // Speaker
-        mSpeakerTuning = (CheckBoxPreference) findPreference(SPEAKER_TUNING);
+        mSpeakerTuning = (SwitchPreference) findPreference(SPEAKER_TUNING);
         updateSpeakerTuning();
         mSpeakerTuning.setOnPreferenceChangeListener(this);
 
@@ -141,7 +141,7 @@ public class BoefflaSoundControl extends PreferenceFragment
         updateHeadphoneVolumeRight();
         mHeadphoneVolumeRight.setOnPreferenceChangeListener(this);
 
-        mPrivacyMode = (CheckBoxPreference) findPreference(PRIVACY_MODE);
+        mPrivacyMode = (SwitchPreference) findPreference(PRIVACY_MODE);
         updatePrivacyMode();
         mPrivacyMode.setOnPreferenceChangeListener(this);
 

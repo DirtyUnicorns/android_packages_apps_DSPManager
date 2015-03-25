@@ -2,12 +2,12 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
     <PreferenceCategory android:title="@string/pref_bassboost_title">
-        <CheckBoxPreference
+        <SwitchPreference
             android:disableDependentsState="false"
             android:key="dsp.bass.enable"
             android:summaryOn="@string/pref_bassboost_summary_on"
             android:summaryOff="@string/pref_bassboost_summary_off"
-            android:title="@string/pref_bassboost_enable"></CheckBoxPreference>
+            android:title="@string/pref_bassboost_enable"></SwitchPreference>
         <com.bel.android.dspmanager.preference.SummariedListPreference
             android:entries="@array/bassboost_modes"
             android:dialogTitle="@string/dialog_effect"
@@ -18,12 +18,12 @@
     </PreferenceCategory>
 
     <PreferenceCategory android:title="@string/pref_equalizer_title">
-        <CheckBoxPreference
+        <SwitchPreference
             android:disableDependentsState="false"
             android:key="dsp.tone.enable"
             android:summaryOn="@string/pref_equalizer_summary_on"
             android:summaryOff="@string/pref_equalizer_summary_off"
-            android:title="@string/pref_equalizer_enable"></CheckBoxPreference>
+            android:title="@string/pref_equalizer_enable"></SwitchPreference>
         <com.bel.android.dspmanager.preference.SummariedListPreference
             android:entries="@array/equalizer_preset_modes"
             android:dialogTitle="@string/pref_equalizer_preset_title"
