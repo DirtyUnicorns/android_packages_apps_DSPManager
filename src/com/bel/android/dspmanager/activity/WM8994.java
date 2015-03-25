@@ -21,7 +21,7 @@ import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.os.Bundle;
-import android.preference.CheckBoxPreference;
+import android.preference.SwitchPreference;
 import android.preference.Preference;
 import android.preference.PreferenceCategory;
 import android.preference.PreferenceFragment;
@@ -63,7 +63,7 @@ public class WM8994 extends PreferenceFragment implements Preference.OnPreferenc
     private static final String PREF_ENABLED = "1";
     private static final String PREF_DISABLED = "0";
 
-    private CheckBoxPreference mPreferences[] = new CheckBoxPreference[OPTION_CONTROLS.length];
+    private SwitchPreference mPreferences[] = new SwitchPreference[OPTION_CONTROLS.length];
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -74,12 +74,12 @@ public class WM8994 extends PreferenceFragment implements Preference.OnPreferenc
 
         for (int i = 0; i < OPTION_CONTROLS.length; i++) {
             if (Utils.fileExists(OPTION_CONTROLS[i][0])) {
-                mPreferences[i] = (CheckBoxPreference) prefSet.findPreference(OPTION_CONTROLS[i][1]);
+                mPreferences[i] = (SwitchPreference) prefSet.findPreference(OPTION_CONTROLS[i][1]);
                 mPreferences[i].setChecked(PREF_ENABLED.equals(
                         Utils.readOneLine(OPTION_CONTROLS[i][0])));
                 mPreferences[i].setOnPreferenceChangeListener(this);
             } else {
-                mPreferences[i] = (CheckBoxPreference) prefSet.findPreference(OPTION_CONTROLS[i][1]);
+                mPreferences[i] = (SwitchPreference) prefSet.findPreference(OPTION_CONTROLS[i][1]);
                 mPreferences[i].setSummary(R.string.pref_unavailable);
                 mPreferences[i].setEnabled(false);
             }

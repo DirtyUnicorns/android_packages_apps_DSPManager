@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Copyright (C) 2012-2013 The CyanogenMod Project
+     Copyright (C) 2015 The OmniROM Project
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -21,12 +22,18 @@
     <color name="cb">#88bbffff</color>
     <color name="freq_hl">#2000ddff</color>
     <color name="freq_hl2">#4033b5e5</color>
-    <color name="eq_red">#80ff0000</color>
-    <color name="eq_yellow">#80f0ff00</color>
-    <color name="eq_holo_bright">#8000ddff</color>
-    <color name="eq_holo_blue">#8033b5e5</color>
-    <color name="eq_holo_dark">#800099cc</color>
+    <color name="eq_red">#4caf50</color>
+    <color name="eq_yellow">#449d48</color>
+    <color name="eq_holo_bright">#3c8c40</color>
+    <color name="eq_holo_blue">#357a38</color>
+    <color name="eq_holo_dark">#2d6930</color>
     <color name="cb_shader">#ffccffff</color>
     <color name="cb_shader_alpha">#44ccffff</color>
     <color name="action_bar_color">#ff0d0d0d</color>
+
+    <!-- Material -->
+    <color name="primary">#4CAF50</color>
+    <color name="primary_dark">#388E3C</color>
+    <color name="accent">#8BC34A</color>
+    <color name="navigation_drawer">#fff</color>
 </resources>

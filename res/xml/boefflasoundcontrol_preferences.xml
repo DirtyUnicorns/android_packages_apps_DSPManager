@@ -26,31 +26,31 @@
 
     <PreferenceCategory android:title="@string/general_title">
 
-        <CheckBoxPreference
+        <SwitchPreference
             android:key="dac_direct"
             android:title="@string/dac_direct_title"
             android:summary="@string/dac_direct_summary"
             android:dependency="boeffla_sound" />
 
-        <CheckBoxPreference
+        <SwitchPreference
             android:key="dac_oversampling"
             android:title="@string/dac_oversampling_title"
             android:summary="@string/dac_oversampling_summary"
             android:dependency="boeffla_sound" />
 
-        <CheckBoxPreference
+        <SwitchPreference
             android:key="fll_tuning"
             android:title="@string/fll_tuning_title"
             android:summary="@string/fll_tuning_summary"
             android:dependency="boeffla_sound" />
 
-        <CheckBoxPreference
+        <SwitchPreference
             android:key="mono_downmix"
             android:title="@string/mono_downmix_title"
             android:summary="@string/mono_downmix_summary"
             android:dependency="boeffla_sound" />
 
-        <CheckBoxPreference
+        <SwitchPreference
             android:key="over_saturation_suppress"
             android:title="@string/over_saturation_suppress"
             android:summary="@string/empty"
@@ -72,7 +72,7 @@
 
     <PreferenceCategory android:title="@string/speaker_title">
 
-        <CheckBoxPreference
+        <SwitchPreference
             android:key="speaker_tuning"
             android:title="@string/speaker_tuning_title"
             android:summary="@string/speaker_tuning_summary"
@@ -93,7 +93,7 @@
 
     <PreferenceCategory android:title="@string/headphone_title">
 
-        <CheckBoxPreference
+        <SwitchPreference
             android:key="privacy_mode"
             android:title="@string/privacy_mode_title"
             android:summary="@string/privacy_mode_summary"

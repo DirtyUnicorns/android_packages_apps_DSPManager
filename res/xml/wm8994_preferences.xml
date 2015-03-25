@@ -6,7 +6,7 @@
         android:key="wm8994_internal_speaker_category"
         android:title="@string/category_wm8994_internal_speaker">
 
-        <CheckBoxPreference
+        <SwitchPreference
             android:key="pref_wm8994_speaker_tuning"
             android:title="@string/pref_wm8994_speaker_tuning_title"
             android:summary="@string/pref_wm8994_speaker_tuning_summary" />
@@ -44,7 +44,7 @@
         android:key="wm8994_signal_processing_category"
         android:title="@string/category_wm8994_signal_processing">
 
-        <CheckBoxPreference
+        <SwitchPreference
             android:key="dsp.wm8994.bassboost.enable"
             android:title="@string/pref_wm8994_bass_boost_enable_title"
             android:summary="@string/pref_wm8994_bass_boost_enable_summary" />
@@ -63,12 +63,12 @@
             android:summary="@string/pref_wm8994_bass_boost_summary"
             android:dialogTitle="@string/pref_wm8994_bass_boost_title" />
 
-        <CheckBoxPreference
+        <SwitchPreference
             android:key="pref_wm8994_mono_downmix"
             android:title="@string/pref_wm8994_mono_downmix_title"
             android:summary="@string/pref_wm8994_mono_downmix_summary" />
 
-        <CheckBoxPreference
+        <SwitchPreference
             android:key="pref_wm8994_stereo_expansion"
             android:title="@string/pref_wm8994_stereo_expansion_title"
             android:summary="@string/pref_wm8994_stereo_expansion_summary" />
@@ -80,17 +80,17 @@
         android:key="wm8994_dac_config_category"
         android:title="@string/category_wm8994_dac_config">
 
-        <CheckBoxPreference
+        <SwitchPreference
             android:key="pref_wm8994_dac_direct"
             android:title="@string/pref_wm8994_dac_direct_title"
             android:summary="@string/pref_wm8994_dac_direct_summary" />
 
-        <CheckBoxPreference
+        <SwitchPreference
             android:key="pref_wm8994_dac_osr128"
             android:title="@string/pref_wm8994_dac_osr128_title"
             android:summary="@string/pref_wm8994_dac_osr128_summary" />
 
-        <CheckBoxPreference
+        <SwitchPreference
             android:key="pref_wm8994_adc_osr128"
             android:title="@string/pref_wm8994_adc_osr128_title"
             android:summary="@string/pref_wm8994_adc_osr128_summary" />
@@ -102,7 +102,7 @@
         android:key="wm8994_codec_optimization_category"
         android:title="@string/category_wm8994_codec_optimization">
 
-        <CheckBoxPreference
+        <SwitchPreference
             android:key="pref_wm8994_fll_tuning"
             android:title="@string/pref_wm8994_fll_tuning_title"
             android:summary="@string/pref_wm8994_fll_tuning_summary" />

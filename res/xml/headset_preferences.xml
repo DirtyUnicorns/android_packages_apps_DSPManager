@@ -2,12 +2,12 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
     <PreferenceCategory android:title="@string/pref_dsp_title">
-        <CheckBoxPreference
+        <SwitchPreference
             android:key="dsp.compression.enable"
             android:summaryOn="@string/pref_dsp_summary_on"
             android:summaryOff="@string/pref_dsp_summary_off"
             android:disableDependentsState="false"
-            android:title="@string/pref_dsp_enable"></CheckBoxPreference>
+            android:title="@string/pref_dsp_enable"></SwitchPreference>
         <com.bel.android.dspmanager.preference.SummariedListPreference
             android:entries="@array/compression_modes"
             android:dialogTitle="@string/dialog_effect"
@@ -19,12 +19,12 @@
 
     <PreferenceCategory android:title="@string/pref_bassboost_title"
         android:key="dsp.bass">
-        <CheckBoxPreference
+        <SwitchPreference
             android:disableDependentsState="false"
             android:key="dsp.bass.enable"
             android:summaryOn="@string/pref_bassboost_summary_on"
             android:summaryOff="@string/pref_bassboost_summary_off"
-            android:title="@string/pref_bassboost_enable"></CheckBoxPreference>
+            android:title="@string/pref_bassboost_enable"></SwitchPreference>
         <com.bel.android.dspmanager.preference.SummariedListPreference
             android:entries="@array/bassboost_modes"
             android:dialogTitle="@string/dialog_effect"
@@ -42,12 +42,12 @@
     </PreferenceCategory>
 
     <PreferenceCategory android:title="@string/pref_equalizer_title">
-        <CheckBoxPreference
+        <SwitchPreference
             android:disableDependentsState="false"
             android:key="dsp.tone.enable"
             android:summaryOn="@string/pref_equalizer_summary_on"
             android:summaryOff="@string/pref_equalizer_summary_off"
-            android:title="@string/pref_equalizer_enable"></CheckBoxPreference>
+            android:title="@string/pref_equalizer_enable"></SwitchPreference>
         <com.bel.android.dspmanager.preference.SummariedListPreference
             android:entries="@array/equalizer_preset_modes"
             android:dialogTitle="@string/pref_equalizer_preset_title"
@@ -66,12 +66,12 @@
     </PreferenceCategory>
 
     <PreferenceCategory android:title="@string/pref_headset_virtual_title">
-        <CheckBoxPreference
+        <SwitchPreference
             android:key="dsp.headphone.enable"
             android:disableDependentsState="false"
             android:summaryOn="@string/pref_headset_virtual_summary_on"
             android:summaryOff="@string/pref_headset_virtual_summary_off"
-            android:title="@string/pref_headset_virtual_enable"></CheckBoxPreference>
+            android:title="@string/pref_headset_virtual_enable"></SwitchPreference>
         <com.bel.android.dspmanager.preference.SummariedListPreference
             android:defaultValue="0"
             android:dialogTitle="@string/dialog_room"
@@ -83,12 +83,12 @@
 
     <PreferenceCategory android:title="@string/pref_headset_stereowide_title"
         android:key="dsp.stereowide">
-        <CheckBoxPreference
+        <SwitchPreference
             android:key="dsp.stereowide.enable"
             android:disableDependentsState="false"
             android:summaryOn="@string/pref_headset_stereowide_summary_on"
             android:summaryOff="@string/pref_headset_stereowide_summary_off"
-            android:title="@string/pref_headset_stereowide_enable"></CheckBoxPreference>
+            android:title="@string/pref_headset_stereowide_enable"></SwitchPreference>
         <com.bel.android.dspmanager.preference.SummariedListPreference
             android:defaultValue="0"
             android:dialogTitle="@string/dialog_stereo"
